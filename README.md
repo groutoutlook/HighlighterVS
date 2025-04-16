@@ -1,14 +1,18 @@
 ## Highlighter v1.0
 
-This extension will highlight a predefined set of keywords in comments such as:
-* TODO
-* BUG
-* NOTE 
-* DISCUSS
-* OPTIMIZE
-* FIXME
-* STEP
-* IMPORTANT
+**Touch a bit for it to working with C/C++ files**
+- You should clone this tree and build them to fetch the `.vsix`, and install them yourselves.
 
-#### Screenshots
+## Usage
+- This extension will highlight a predefined set of keywords in comments such as:
+  * TODO
+  * BUG
+  * NOTE 
+  * DISCUSS
+  * OPTIMIZE
+  * FIXME
+  * STEP
+  * IMPORTANT
+
+### Screenshots
 ![Highlighter](image.png)
