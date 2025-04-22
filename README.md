@@ -13,8 +13,11 @@
   * FIXME
   * STEP
   * IMPORTANT
-  * NOTE
   * EXP
+  * INFO
+  * WARN
+  * HACK
+  * FIX
 
 ### Screenshots
 ![Highlighter](Screenshot.png)
