@@ -5,7 +5,8 @@ using System.ComponentModel.Composition;
 
 namespace Highlighter
 {
-    [Export(typeof(IClassifierProvider)), ContentType("CSharp"), ContentType("C/C++")]
+    // INFO: since I want to check C++ and CMakeLists.txt files as well.
+    [Export(typeof(IClassifierProvider)), ContentType("CSharp"), ContentType("C/C++"), ContentType("text")]
     internal sealed class Provider : IClassifierProvider
     {
         [Import]

@@ -37,5 +37,13 @@ namespace Highlighter
         [Export(typeof(ClassificationTypeDefinition))]
         [Name(Consts._classificationTypeNameImportant)]
         private static readonly ClassificationTypeDefinition Definition_Comment_Important;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameInfo)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Info;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameExprimental)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Exprimental;
     }
 }

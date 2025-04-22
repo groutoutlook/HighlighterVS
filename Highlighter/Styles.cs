@@ -165,4 +165,45 @@ namespace Highlighter
             IsBold = false;
         }
     }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameInfo)]
+    [Name(Consts._classificationTypeNameInfo)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentInfo : ClassificationFormatDefinition
+    {
+        public FormatCommentInfo()
+        {
+            DisplayName = "Info Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._info);
+            IsBold = false;
+        }
+    }
+
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameExprimental)]
+    [Name(Consts._classificationTypeNameExprimental)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentExperimental : ClassificationFormatDefinition
+    {
+        public FormatCommentExperimental()
+        {
+            DisplayName = "Exprimental Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._exprimental);
+            IsBold = false;
+        }
+    }
+
 }

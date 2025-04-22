@@ -9,11 +9,11 @@ namespace Highlighter
         internal const string _classificationTypeNameFix = "Comment.FixMe";
         internal const string _classificationTypeNameNote = "Comment.Note";
         internal const string _classificationTypeNameOptimize = "Comment.Optimize";
-
-        // 2024-08-05 (#1)
         internal const string _classificationTypeNameDiscuss = "Comment.Discuss";
         internal const string _classificationTypeNameStep = "Comment.Step";
         internal const string _classificationTypeNameImportant = "Comment.Important";
+        internal const string _classificationTypeNameInfo = "Comment.Info";
+        internal const string _classificationTypeNameExprimental = "Comment.Expimental";
 
         internal static class Colors
         {
@@ -23,11 +23,11 @@ namespace Highlighter
             internal static readonly Color _note = Color.FromRgb(52, 152, 219);
             internal static readonly Color _optimize = Color.FromRgb(26, 188, 156);
             internal static readonly Color _system = Color.FromRgb(51, 51, 3);
-
-            // 2024-08-05 (#1)
             internal static readonly Color _discuss = Color.FromRgb(241, 196, 15);
             internal static readonly Color _step = Color.FromRgb(241, 126, 23);
             internal static readonly Color _important = Color.FromRgb(235, 217, 180);
+            internal static readonly Color _info = Color.FromRgb(100, 200, 255);
+            internal static readonly Color _exprimental = Color.FromRgb(255, 255, 10);
         }
     }
 }

@@ -34,6 +34,6 @@ namespace Highlighter
 
         public static bool Contains(string prefix) => _prefixes.Contains(prefix);
 
-        private static void InitDefaults() => Add("todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important");
+        private static void InitDefaults() => Add("todo", "bug", "fixme", "note", "optimize", "discuss", "step", "important", "info", "exp");
     }
 }

@@ -1,6 +1,6 @@
 ## Highlighter
 
-**Touch a bit for it to work with C/C++ files**
+**Touch a bit for it to work with C/C++ files and CMakeLists.txt**
 - You should clone this tree and build them to fetch the `.vsix`, and install them yourselves.
 
 ## Usage
@@ -13,10 +13,11 @@
   * FIXME
   * STEP
   * IMPORTANT
+  * NOTE
+  * EXP
 
 ### Screenshots
-![Highlighter](image.png)
-
+![Highlighter](Screenshot.png)
 
 ## Notes
 - Also check out [QuadSpinner/Highlighter](https://github.com/QuadSpinner/Highlighter)

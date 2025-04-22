@@ -18,6 +18,8 @@ namespace Highlighter
         private readonly IClassificationType _comment_Todo;
         private readonly IClassificationType _comment_Step;
         private readonly IClassificationType _comment_Important;
+        private readonly IClassificationType _comment_Info;
+        private readonly IClassificationType _comment_Experimental;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -34,6 +36,8 @@ namespace Highlighter
             _comment_Discuss = registry.GetClassificationType(Consts._classificationTypeNameDiscuss);
             _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
             _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
+            _comment_Info = registry.GetClassificationType(Consts._classificationTypeNameInfo);
+            _comment_Experimental = registry.GetClassificationType(Consts._classificationTypeNameExprimental);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -111,7 +115,7 @@ namespace Highlighter
                         //spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart, commentText.Length + slashesLength)), GetClassifier(prefix.ToLower())));
 
                         // the below code highlights only the prefix i.e. BUG, TODO, etc.
-                        spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart + slashesLength, prefix.Length + 1)), GetClassifier(prefix.ToLower())));
+                        spans.Add(new ClassificationSpan(new SnapshotSpan(span.Snapshot, new Span(slashesStart + slashesLength, prefix.Length + 1 + 1)), GetClassifier(prefix.ToLower())));
                         skipInlineMatching = true;
                     }
                 }
@@ -151,7 +155,6 @@ namespace Highlighter
 
                 case "note":
                     return _comment_Note;
-
                 case "optimize":
                     return _comment_Optimize;
 
@@ -163,6 +166,13 @@ namespace Highlighter
 
                 case "important":
                     return _comment_Important;
+                    
+                case "info":
+                    return _comment_Info;
+
+                    
+                case "exp":
+                    return _comment_Experimental;
 
                 default:
                     return _comment_Todo;
