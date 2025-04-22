@@ -187,8 +187,8 @@ namespace Highlighter
     }
 
     [Export(typeof(EditorFormatDefinition))]
-    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameExprimental)]
-    [Name(Consts._classificationTypeNameExprimental)]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameExperimental)]
+    [Name(Consts._classificationTypeNameExperimental)]
     [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
     [UserVisible(true)]
     [Order(After = PredefinedClassificationTypeNames.Comment)]
@@ -197,11 +197,51 @@ namespace Highlighter
     {
         public FormatCommentExperimental()
         {
-            DisplayName = "Exprimental Comment";
+            DisplayName = "Experimental Comment";
 
             BackgroundCustomizable = false;
             ForegroundColor = Consts.Colors._system;
-            BackgroundBrush = new SolidColorBrush(Consts.Colors._exprimental);
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._experimental);
+            IsBold = false;
+        }
+    }
+    
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameHack)]
+    [Name(Consts._classificationTypeNameHack)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentHack : ClassificationFormatDefinition
+    {
+        public FormatCommentHack()
+        {
+            DisplayName = "Hack Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._hack);
+            IsBold = false;
+        }
+    }
+    
+    [Export(typeof(EditorFormatDefinition))]
+    [ClassificationType(ClassificationTypeNames = Consts._classificationTypeNameFixNew)]
+    [Name(Consts._classificationTypeNameFixNew)]
+    [BaseDefinition(PredefinedClassificationTypeNames.Comment)]
+    [UserVisible(true)]
+    [Order(After = PredefinedClassificationTypeNames.Comment)]
+    [Order(After = "Xml Doc Comment")]
+    internal sealed class FormatCommentFixNew : ClassificationFormatDefinition
+    {
+        public FormatCommentFixNew()
+        {
+            DisplayName = "FixNew Comment";
+
+            BackgroundCustomizable = false;
+            ForegroundColor = Consts.Colors._system;
+            BackgroundBrush = new SolidColorBrush(Consts.Colors._fixnew);
             IsBold = false;
         }
     }

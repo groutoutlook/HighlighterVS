@@ -13,7 +13,9 @@ namespace Highlighter
         internal const string _classificationTypeNameStep = "Comment.Step";
         internal const string _classificationTypeNameImportant = "Comment.Important";
         internal const string _classificationTypeNameInfo = "Comment.Info";
-        internal const string _classificationTypeNameExprimental = "Comment.Expimental";
+        internal const string _classificationTypeNameExperimental = "Comment.Experimental";
+        internal const string _classificationTypeNameHack = "Comment.Hack";
+        internal const string _classificationTypeNameFixNew = "Comment.FixNew";
 
         internal static class Colors
         {
@@ -27,7 +29,9 @@ namespace Highlighter
             internal static readonly Color _step = Color.FromRgb(241, 126, 23);
             internal static readonly Color _important = Color.FromRgb(235, 217, 180);
             internal static readonly Color _info = Color.FromRgb(100, 200, 255);
-            internal static readonly Color _exprimental = Color.FromRgb(255, 255, 10);
+            internal static readonly Color _experimental = Color.FromRgb(255, 255, 10);
+            internal static readonly Color _hack = Color.FromRgb(255, 20, 20);
+            internal static readonly Color _fixnew = Color.FromRgb(255, 116, 146);
         }
     }
 }

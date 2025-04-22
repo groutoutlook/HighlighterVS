@@ -20,6 +20,8 @@ namespace Highlighter
         private readonly IClassificationType _comment_Important;
         private readonly IClassificationType _comment_Info;
         private readonly IClassificationType _comment_Experimental;
+        private readonly IClassificationType _comment_Hack;
+        private readonly IClassificationType _comment_FixNew;
         private readonly string _pattern = @"(?<Star>\*)?" + @"(?<Slashes>(?<!/)(/{2,}))[ \t\v\f]*" + @"(?<Comment>[^\n]*)";
         private bool _isClassificationRunning;
 
@@ -37,7 +39,9 @@ namespace Highlighter
             _comment_Step = registry.GetClassificationType(Consts._classificationTypeNameStep);
             _comment_Important = registry.GetClassificationType(Consts._classificationTypeNameImportant);
             _comment_Info = registry.GetClassificationType(Consts._classificationTypeNameInfo);
-            _comment_Experimental = registry.GetClassificationType(Consts._classificationTypeNameExprimental);
+            _comment_Experimental = registry.GetClassificationType(Consts._classificationTypeNameExperimental);
+            _comment_Hack = registry.GetClassificationType(Consts._classificationTypeNameHack);
+            _comment_FixNew = registry.GetClassificationType(Consts._classificationTypeNameFixNew);
         }
 
         public event EventHandler<ClassificationChangedEventArgs> ClassificationChanged;
@@ -166,14 +170,22 @@ namespace Highlighter
 
                 case "important":
                     return _comment_Important;
-                    
+
                 case "info":
                     return _comment_Info;
-
-                    
+                   
                 case "exp":
                     return _comment_Experimental;
+                   
+                case "hack":
+                    return _comment_Hack;
+                    
+                case "fix":
+                    return _comment_FixNew;
 
+                case "warn":
+                    return _comment_Important;
+                    
                 default:
                     return _comment_Todo;
             }

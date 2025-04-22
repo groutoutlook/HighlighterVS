@@ -43,7 +43,15 @@ namespace Highlighter
         private static readonly ClassificationTypeDefinition Definition_Comment_Info;
 
         [Export(typeof(ClassificationTypeDefinition))]
-        [Name(Consts._classificationTypeNameExprimental)]
-        private static readonly ClassificationTypeDefinition Definition_Comment_Exprimental;
+        [Name(Consts._classificationTypeNameExperimental)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Experimental;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameHack)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_Hack;
+
+        [Export(typeof(ClassificationTypeDefinition))]
+        [Name(Consts._classificationTypeNameFixNew)]
+        private static readonly ClassificationTypeDefinition Definition_Comment_FixNew;
     }
 }
